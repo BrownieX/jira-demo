@@ -1,0 +1,16 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: jira-cluster
+  namespace: devops
+  labels:
+    service: jira
+spec:
+  type: LoadBalancer
+  ports:
+    - name: connector
+      port: 8080
+  selector:
+    service: jira
+  sessionAffinity: ClientIP
