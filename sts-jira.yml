@@ -29,13 +29,13 @@ spec:
                     values:
                       - jira
               topologyKey: "kubernetes.io/hostname"
-      # initContainers:
-      #   - name: bootstrap
-      #     image: docker.io/busybox:1.31
-      #     args:
-      #       - /bin/sh
-      #       - -c
-      #       - until nc -zvw1 postgres-cluster 5432; do sleep 1; done
+      initContainers:
+        - name: bootstrap
+          image: docker.io/busybox:1.31
+          args:
+            - /bin/sh
+            - -c
+            - until nc -zvw1 postgres-cluster 5432; do sleep 1; done
       containers:
         - name: jira
           image: docker.io/alvistack/jira:8.8

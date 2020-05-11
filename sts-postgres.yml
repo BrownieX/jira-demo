@@ -69,7 +69,8 @@ spec:
             initialDelaySeconds: 60
             failureThreshold: 60
           volumeMounts:
-            - mountPath: /var/lib/postgresql/data
+            - mountPath: /var/lib/postgresql/
+              subPath: data
               name: var-lib-postgresql-data
       volumes:
         - name: var-lib-postgresql-data
