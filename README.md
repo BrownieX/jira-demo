@@ -33,7 +33,7 @@ If you wish to edit all your files to use a different namespace (default is "dev
 
 Ensure you are logged on to cluster:  az aks get-credentials --resource-group YourResourceGroup --name YourAKSCluster
 
-git clone ssh://git@hkbitbucket.hkg.mizuho-sc.com:7999/as/jira-demo.git  >>> clone the jira-demo repo to your local machine
+git clone https://github.com/BrownieX/jira-demo.git  >>> clone the jira-demo repo to your local machine
 
 cd jira-demo  >>> Switch to the jira-demo folder on your local machine
 
