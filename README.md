@@ -26,23 +26,21 @@ It provides a single-node Jira server using a Postgres DB server (both deployed 
 
 ### Create Namesapce 
 
-```
 If you wish to edit all your files to use a different namespace (default is "devops") then please note that Namespace must be created first to deploy the other configurations. Ensure namespace yaml filename is the first file that will be read when you run the kubectl apply -f command. e.g. add "00-" to beginning of yaml filename 
-```
+
 
 ### Deploy JIRA to AKS Cluster
 
+Ensure you are logged on to cluster:  
 ```
-Ensure you are logged on to cluster:  az aks get-credentials --resource-group YourResourceGroup --name YourAKSCluster
+az aks get-credentials --resource-group YourResourceGroup --name YourAKSCluster
 
-cd to the jira-demo directory.
+cd jira-demo
 
-kubectl apply -Rf .
-```
+kubectl apply -Rf
 
 kubectl -n devops get all
-```
-```
+
 NAME             READY   STATUS    RESTARTS   AGE
 pod/jira-0       1/1     Running   0          57m
 pod/postgres-0   1/1     Running   0          57m
