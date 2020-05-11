@@ -32,7 +32,7 @@ If you wish to edit all your files to use a different namespace (default is "dev
 ### Deploy JIRA to AKS Cluster
 
 Ensure you are logged on to cluster:  
-```
+
 az aks get-credentials --resource-group YourResourceGroup --name YourAKSCluster
 
 cd jira-demo
@@ -45,20 +45,16 @@ NAME             READY   STATUS    RESTARTS   AGE
 pod/jira-0       1/1     Running   0          57m
 pod/postgres-0   1/1     Running   0          57m
 
-
 NAME                       TYPE           CLUSTER-IP     EXTERNAL-IP     PORT(S)             AGE
 service/jira               ClusterIP      None           <none>          8080/TCP,8005/TCP   57m
 service/jira-cluster       LoadBalancer   10.0.55.122    10.106.202.97   8080:30763/TCP      57m
 service/postgres           ClusterIP      None           <none>          5432/TCP            57m
 service/postgres-cluster   ClusterIP      10.0.230.209   <none>          5432/TCP            57m
 
-
-
-
 NAME                        READY   AGE
 statefulset.apps/jira       1/1     57m
 statefulset.apps/postgres   1/1     57m
-```
+
 
 ### Configure Jira
 
