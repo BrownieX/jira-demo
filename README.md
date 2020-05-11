@@ -3,6 +3,11 @@ This a demo of how to deploy JIRA on Azure AKS.
 
 It provides a single-node Jira server using a Postgres DB server (both deployed as Statefulsets). 
 
+Created by: Neil Brown 
+Email:  neil.n.brown@gmail.com
+
+JIRA & Postgres DB Images provided by: Edison Wong, PantaRei Design: https://github.com/alvistack
+
 ## Overview
 
 - This setup does not include ingress and is NOT production ready. Do not run Jira like this in production.
