@@ -4,8 +4,8 @@ kind: Service
 metadata:
   name: jira-cluster
   namespace: devops
-  annotations:
-    service.beta.kubernetes.io/azure-load-balancer-internal: "true"   #Comment out this line if you wish to use External Loadbalancer/Public IP
+  #annotations:
+    #service.beta.kubernetes.io/azure-load-balancer-internal: "true"   #Comment out this line if you wish to use External Loadbalancer/Public IP
   labels:
     service: jira
 spec:
